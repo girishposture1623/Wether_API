@@ -3,7 +3,7 @@ async function GetCall() {
     const input = document.querySelector('input');
     const a = input.value
     console.log(a)
-    const responce = await fetch(`http://api.weatherapi.com/v1/current.json?key=915069c13d8f43d7a39144417251710&q=${a}&aqi=yes`)
+    const responce = await fetch(`https://api.weatherapi.com/v1/current.json?key=915069c13d8f43d7a39144417251710&q=${a}&aqi=yes`)
     const advice = await responce.json();
     Show(advice);
 }
@@ -47,4 +47,5 @@ async function GetCalla() {
     const temp = document.getElementById('id4')
     temp.innerText = advice.current.temp_c + '°C'
 }
+
 GetCalla();
