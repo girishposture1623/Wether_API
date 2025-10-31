@@ -31,7 +31,7 @@ async function GetCalla() {
     const input = document.querySelector('input');
     const a = input.value
     console.log(a)
-    const responce = await fetch( `http://api.weatherapi.com/v1/current.json?key=915069c13d8f43d7a39144417251710&q=mumbai&aqi=yes`)
+    const responce = await fetch( `https://api.weatherapi.com/v1/current.json?key=915069c13d8f43d7a39144417251710&q=mumbai&aqi=yes`)
     const advice = await responce.json();
     console.log(advice)
 
@@ -49,3 +49,4 @@ async function GetCalla() {
 }
 
 GetCalla();
+
